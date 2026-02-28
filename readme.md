@@ -70,28 +70,24 @@ tree -F -I ".venv|.git|readme.md"
 
 ## Учебные материалы 
 
-- [x] [Convolution Neural Network](https://www.youtube.com/watch?v=HGwBXDKFk9)
-
-  Как работает CNN в общих чертах.  
-
-- [ ] [Softmax Activation Function](https://www.pinecone.io/learn/softmax-activation/)  
-
-  **Формулы**  
-
-  | ReLU | Sigmoid | Softmax |
-  |:-----|:--------|:--------|
-  | $relu(x)=\max(0,x)$ | $\sigma(x)=\frac{1}{1+e^{-x}}$ | $\sigma_i(\mathbf{z})=\frac{e^{z_i}}{\sum_{j}\ e^{z_j}}$ |  
-
-  **О чем расскажет эта статья**
+- [x] [Softmax](https://www.pinecone.io/learn/softmax-activation/)  
 
   - Как использовать **Softmax** в качестве функции активации для последнего слоя весов в задаче классификации.
   - Как **Softmax** преобразует вектор логитов в вектор вероятностей.
   - **Softmax** как обобщение Sigmoid. Частный случай: бинарная классификация.
   - Реализация функций активации на Python.  
 
-- [ ] [CNN practice](https://www.youtube.com/watch?v=jztwpsIzEGc)  
+- [x] [NN](https://www.youtube.com/watch?v=CqOfi41LfDw)
 
-- [ ] [DVC practice](https://www.youtube.com/playlist?list=PL7WG7YrwYcnDb0qdPl9-KEStsL-3oaEjg)  
+- [ ] [NN: Backpropagation](https://www.youtube.com/watch?v=IN2XmBhILt4)
+
+- [ ] [NN: Cross Entropy](https://www.youtube.com/watch?v=6ArSys5qHAU)
+
+- [x] [CNN](https://www.youtube.com/watch?v=HGwBXDKFk9)
+
+- [ ] [CNN: practice](https://www.youtube.com/watch?v=jztwpsIzEGc)  
+
+- [ ] [DVC: practice](https://www.youtube.com/playlist?list=PL7WG7YrwYcnDb0qdPl9-KEStsL-3oaEjg)  
 
 
 ## Roadmap
@@ -124,5 +120,5 @@ tree -F -I ".venv|.git|readme.md"
 ---
 
 - [ ] Не-лягушка
-- [ ] Выбор гиперпараметров.  
-Кросс-валидация: cложность вычислений / Accuracy
+- [ ] Выбор гиперпараметров
+- [ ] Кросс-валидация: Сложность / Accuracy
