@@ -1,6 +1,18 @@
 
 # CNN: 5 видов лягушек
 
+## Stack
+
+- [x] notes.ipynb
+- [x] contourf plot
+- [x] git push
+- [ ] nn: backprop
+- [ ] nn: cross-entrory
+- [ ] download data
+- [ ] cnn: practice
+- [ ] dvc:practice
+
+
 ## Лягушки
 
 <table>
@@ -56,7 +68,10 @@ tree -F -I ".venv|.git|readme.md"
 
 ./
 ├── cnn.ipynb
-│   # ML main algorithm
+│   # main ML algorithm
+│
+├── notes.ipynb
+│   # activation function plots
 │
 ├── req.txt
 │   # requirements for cnn.ipynb
