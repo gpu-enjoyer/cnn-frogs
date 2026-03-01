@@ -6,8 +6,8 @@
 - [x] notes.ipynb
 - [x] contourf plot
 - [x] git push
-- [ ] nn: backprop
-- [ ] nn: cross-entrory
+- [x] nn: backprop
+- [x] nn: cross-entrory
 - [ ] download data
 - [ ] cnn: practice
 - [ ] dvc:practice
@@ -71,7 +71,11 @@ tree -F -I ".venv|.git|readme.md"
 │   # main ML algorithm
 │
 ├── notes.ipynb
-│   # activation function plots
+│   # Backpropagation: part.der.
+│   # RSS
+│   # Activation func-s
+│   # Cross Entropy
+│   # ResNet
 │
 ├── req.txt
 │   # requirements for cnn.ipynb
@@ -94,9 +98,21 @@ tree -F -I ".venv|.git|readme.md"
 
 - [x] [NN](https://www.youtube.com/watch?v=CqOfi41LfDw)
 
-- [ ] [NN: Backpropagation](https://www.youtube.com/watch?v=IN2XmBhILt4)
+- [x] [NN: Backpropagation](https://www.youtube.com/watch?v=IN2XmBhILt4)
 
-- [ ] [NN: Cross Entropy](https://www.youtube.com/watch?v=6ArSys5qHAU)
+  **Рассмотреть** cуществование лучшего множества весов.  
+
+  Алгоритм SGD — это решение задачи поиска **локального минимума**.  
+  Поэтому важны **начальные значения весов**.  
+  Чтобы можно было воспользоваться экспертностью в определении весов, необходимо уметь интерпретировать слои NN.  
+  ...
+
+- [x] [NN: Cross Entropy](https://www.youtube.com/watch?v=6ArSys5qHAU)
+
+  Обычная точность (Accuracy) — это просто «true/false».  
+  Кросс-энтропия штрафует за сильную уверенность в неправильном ответе.  
+  Это заставляет алгоритм не просто угадывать, а стремиться к максимальной уверенности в правильных ответах.
+  $$\sum{y_i \log{p_i}}$$
 
 - [x] [CNN](https://www.youtube.com/watch?v=HGwBXDKFk9)
 
@@ -107,7 +123,7 @@ tree -F -I ".venv|.git|readme.md"
 
 ## Roadmap
 
-- [ ] https://www.gbif.org
+- [ ] get data
 
 ---
 
@@ -135,5 +151,5 @@ tree -F -I ".venv|.git|readme.md"
 ---
 
 - [ ] Не-лягушка
-- [ ] Выбор гиперпараметров
-- [ ] Кросс-валидация: Сложность / Accuracy
+- [ ] Кросс-валидация (разбиения)
+- [ ] Выбор гиперпараметров ?
