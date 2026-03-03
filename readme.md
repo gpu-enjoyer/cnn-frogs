@@ -9,8 +9,9 @@
 - [x] nn: backprop
 - [x] nn: cross-entrory
 - [x] download data
-- [ ] redo: download:  
-get() -> json -> observation -> img -> link -> save() -> csv
+- [x] redo: get_links:  
+json -> get() -> json -> observations -> imgs -> links -> json
+- [ ] links.json -> dataset
 - [ ] dvc ?
 - [ ] cnn: practice
 - [ ] dvc:practice
