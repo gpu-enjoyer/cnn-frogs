@@ -2,7 +2,9 @@
 # CNN: 5 видов лягушек
 
 ## todo
-- [ ] links.json -> dataset
+- [x] links.json -> dataset
+- [ ] parallel: download.py
+- [ ] maybe parallel: get_links.py
 - [ ] create pipeline ...
 ```bash
 dvc stage add -n download \
@@ -12,7 +14,7 @@ dvc stage add -n download \
     python download.py
 ```
 ```
-dataset.json фиксируется в dvc + git
+links.json и dataset фиксируются в dvc + git
 get_links.py НЕ запускается автоматически в repro.
 get_links.py позволяет получить новую версию данных при желании.
 ```
