@@ -1,20 +1,22 @@
 
 # CNN: 5 видов лягушек
 
-## Stack
-
-- [x] notes.ipynb
-- [x] contourf plot
-- [x] git push
-- [x] nn: backprop
-- [x] nn: cross-entrory
-- [x] download data
-- [x] redo: get_links:  
-json -> get() -> json -> observations -> imgs -> links -> json
+## todo
 - [ ] links.json -> dataset
-- [ ] dvc ?
-- [ ] cnn: practice
-- [ ] dvc:practice
+- [ ] create pipeline ...
+```bash
+dvc stage add -n download \
+    -d download.py \
+    -d dataset.json \
+    -o images \
+    python download.py
+```
+```
+dataset.json фиксируется в dvc + git
+get_links.py НЕ запускается автоматически в repro.
+get_links.py позволяет получить новую версию данных при желании.
+```
+- [ ] cnn
 
 
 ## Лягушки
@@ -62,9 +64,10 @@ deactivate
 
 - [x] [CNN](https://www.youtube.com/watch?v=HGwBXDKFk9)
 
+- [ ] [DVC: practice](https://www.youtube.com/watch?v=LAFVk7yz_-E)
+
 - [ ] [CNN: practice](https://www.youtube.com/watch?v=jztwpsIzEGc)  
 
-- [ ] [DVC: practice](https://www.youtube.com/playlist?list=PL7WG7YrwYcnDb0qdPl9-KEStsL-3oaEjg)
 
 
 ## Roadmap
@@ -93,6 +96,5 @@ deactivate
 
 ---
 
-- [ ] Не-лягушка
 - [ ] Кросс-валидация (разбиения)
 - [ ] Выбор гиперпараметров ?
