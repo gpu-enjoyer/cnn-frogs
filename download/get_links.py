@@ -69,6 +69,17 @@ for j, name in enumerate(names, start=1):
         params["page"] += 1
         time.sleep(1)
 
+    ##
+    ## Todo
+    ##
+    ## Здесь задается имя классов типа "class1"
+    ##  Заменить имена папок на имена как в 
+    ## 
+    ## Скриптам get_imgs.py и rm_imgs.py будет легче
+    ##  опознавать папки и не держать в голове, что
+    ##   "class1" соответствует "Agalychnis callidryas" и тд.
+    ##
+
     all_links[f"class{j}"] = links.copy()
 
 
