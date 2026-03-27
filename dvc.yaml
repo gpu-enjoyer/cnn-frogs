@@ -1,12 +1,12 @@
 
-# todo
+# todo ...
 
 stages:
   get_links:
     cmd: python3 download/get_links.py
     outs:
       - download/json/links.json
-  donwload:
+  get_imgs:
     cmd: python3 download/get_imgs.py
     outs:
       - download/dataset/
