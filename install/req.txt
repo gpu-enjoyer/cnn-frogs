@@ -1,0 +1,8 @@
+
+dvc
+
+jupyter
+ipykernel
+
+matplotlib
+seaborn

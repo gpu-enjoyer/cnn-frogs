@@ -9,9 +9,9 @@ from   pathlib import Path
 
 # params <- request.json
 
-root_path = Path(__file__).resolve().parent.parent
+this_dir = Path(__file__).resolve().parent
 
-with open(root_path/"json_to_json"/"request.json", 'r') as file:
+with open(this_dir/"json"/"request.json", 'r') as file:
     request_json = json.load(file)
 
 depth = request_json.get("depth", 0)
@@ -72,7 +72,7 @@ for j, name in enumerate(names, start=1):
     all_links[f"class{j}"] = links.copy()
 
 
-with open(root_path/"json_to_json"/"links.json", 'w') as file:
+with open(this_dir/"json"/"links.json", 'w') as file:
     json.dump(all_links, file, indent=4)
 
 print("get_links.py done")

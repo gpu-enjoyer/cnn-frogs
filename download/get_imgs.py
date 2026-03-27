@@ -3,10 +3,10 @@ import requests
 import json
 from   pathlib import Path
 
-root_path = Path(__file__).resolve().parent.parent
-dataset_path = root_path / "dataset"
+this_dir = Path(__file__).resolve().parent
+dataset_path = this_dir / "dataset"
 
-with open(root_path / "json_to_json" / "links.json", "r") as file:
+with open(this_dir / "json" / "links.json", "r") as file:
     links_json = json.load(file)
 
 for class_name, class_links in links_json.items():
@@ -23,7 +23,7 @@ for class_name, class_links in links_json.items():
             img_path = Path(class_path / f"{i}{suffix}")
             with open(img_path, "wb") as file:
                 file.write(response.content)
-            print(f"saved: {img_path}")
+            # print(f"saved: {img_path}")
             # time.sleep(1)
         except Exception as e:
             print(f"error: {url} -> {e}")
