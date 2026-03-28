@@ -5,23 +5,23 @@ stages:
     deps:
     - path: download/json/request.json
       hash: md5
-      md5: 72c4201108a9f1947b064061f3b88ae8
-      size: 235
+      md5: 6ce81ce4714281c9b50f65058882adcc
+      size: 237
     outs:
     - path: download/json/links.json
       hash: md5
-      md5: 14396c6047d41ffdf8ae14b7d9aea77f
-      size: 4092
+      md5: fb5ec07f1662d9d80386e5cdb7a317f8
+      size: 321847
   get_imgs:
     cmd: python3 download/get_imgs.py
     deps:
     - path: download/json/links.json
       hash: md5
-      md5: 14396c6047d41ffdf8ae14b7d9aea77f
-      size: 4092
+      md5: fb5ec07f1662d9d80386e5cdb7a317f8
+      size: 321847
     outs:
     - path: download/dataset/
       hash: md5
-      md5: 4b56db6f408614c30b83821d6e26ea70.dir
-      size: 17938668
-      nfiles: 50
+      md5: cb4ed23775f19bf943524ba6cfb339ae.dir
+      size: 25065757
+      nfiles: 3974
