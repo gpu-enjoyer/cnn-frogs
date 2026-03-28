@@ -38,7 +38,7 @@ dvc push
 ```
 
 - [ ] CNN  
-  https://www.youtube.com/watch?v=CtzfbUwrYGI&t=435s
+  https://www.youtube.com/watch?v=CtzfbUwrYGI
 
 
 ## Учебные материалы 
