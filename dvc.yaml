@@ -1,12 +1,75 @@
 
-# todo ...
+#
+# dvc.yaml
+#
+# DVC читает этот файл и строит граф зависимостей.
+#  Порядок важен.
+#
+
+#
+# "dvc repro"
+#
+#  1. Проверяет изменения (inputs, deps)
+#   2. Запускает только стадии, которые зависят от изменённого
+#    3. Кэширует вывод (outs)
+#
+
+#
+#  cmd ...... исполняемая команда
+#   deps ..... если эти файлы изменятся – стадия перезапустится
+#    outs ..... эти файлы считаются "создаваемые" и кэшируются
+#
+#     params ... параметры из файла (например, request.json)
+#
+
 
 stages:
+
+  clear_data:
+    deps:
+      - download/json/request.json
+    cmd:
+      python3 download/clear_data.py
+
   get_links:
-    cmd: python3 download/get_links.py
+    deps:
+      - download/json/request.json
+    cmd:
+      python3 download/get_links.py
     outs:
       - download/json/links.json
+
   get_imgs:
-    cmd: python3 download/get_imgs.py
+    deps:
+      - download/json/links.json
+    cmd:
+      python3 download/get_imgs.py
     outs:
       - download/dataset/
+
+
+##
+## todo:
+##  Более тонко обрабатывать изменения
+##   параметров request.json, а также 
+##    изменения ссылок в links.json
+##
+
+##
+## Сейчас ссылки либо удаляются полностью (forced),
+##  либо могут создаваться дубликаты.
+## 
+
+##
+## TODO
+##
+##  Промежуточные шаги
+##
+##   Cкрипты с логикой проверки инвариант cоздают файлы.
+##     dvc.yaml считает их зависимостями (deps)
+##
+##  Как разделены зоны ответственности:
+##
+##   - условия вызова get_links.py и get_imgs.py
+##   - условия внутри них
+##

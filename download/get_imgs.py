@@ -1,5 +1,8 @@
 
+# 2) links.json -> get_imgs.py -> dataset/
+
 import requests
+import time
 import json
 from   pathlib import Path
 
@@ -9,11 +12,13 @@ dataset_path = this_dir / "dataset"
 with open(this_dir / "json" / "links.json", "r") as file:
     links_json = json.load(file)
 
-for class_name, class_links in links_json.items():
-    class_path = dataset_path / class_name
+for name, links in links_json.items():
+
+    class_path = dataset_path / name.replace(" ", "_")
     class_path.mkdir(parents=True, exist_ok=True)
 
-    for i, url in enumerate(class_links):
+    # todo: get id for img_path
+    for i, url in enumerate(links):
         try:
             response = requests.get(url, timeout=7)
             response.raise_for_status()
@@ -24,7 +29,7 @@ for class_name, class_links in links_json.items():
             with open(img_path, "wb") as file:
                 file.write(response.content)
             # print(f"saved: {img_path}")
-            # time.sleep(1)
+            time.sleep(1)
         except Exception as e:
             print(f"error: {url} -> {e}")
 

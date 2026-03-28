@@ -1,5 +1,6 @@
 
-# imports
+# 1) request.json -> get_links.py -> links.json 
+
 
 import requests
 import time
@@ -21,6 +22,7 @@ print(names)
 
 base_url = "https://api.inaturalist.org/v1/observations"
 
+# todo: shuffle
 params = {
     "quality_grade": "research",
     "media_type":    "photo",
@@ -33,17 +35,18 @@ params = {
 # all_links -> links.json
 
 all_links = {
-    f"class{i}": [] 
-    for i in range(1, len(names) + 1)
+    name: []
+    for name in names
 }
 
-for j, name in enumerate(names, start=1):
+for name in names:
+
     params["page"] = 1
     params["taxon_name"] = name
     links = []
     d = 0
 
-    print(name, j)
+    print(f"get links: {name}")
 
     while (d < depth):
         response = requests.get(base_url, params=params)
@@ -69,18 +72,7 @@ for j, name in enumerate(names, start=1):
         params["page"] += 1
         time.sleep(1)
 
-    ##
-    ## Todo
-    ##
-    ## Здесь задается имя классов типа "class1"
-    ##  Заменить имена папок на имена как в 
-    ## 
-    ## Скриптам get_imgs.py и rm_imgs.py будет легче
-    ##  опознавать папки и не держать в голове, что
-    ##   "class1" соответствует "Agalychnis callidryas" и тд.
-    ##
-
-    all_links[f"class{j}"] = links.copy()
+    all_links[name] = links.copy()
 
 
 with open(this_dir/"json"/"links.json", 'w') as file:
