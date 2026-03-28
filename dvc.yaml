@@ -1,4 +1,23 @@
 
+stages:
+
+  get_links:
+    deps:
+      - download/json/request.json
+    cmd:
+      python3 download/get_links.py
+    outs:
+      - download/json/links.json
+
+  get_imgs:
+    deps:
+      - download/json/links.json
+    cmd:
+      python3 download/get_imgs.py
+    outs:
+      - download/dataset/
+
+
 #
 # dvc.yaml
 #
@@ -21,31 +40,6 @@
 #
 #     params ... параметры из файла (например, request.json)
 #
-
-
-stages:
-
-  clear_data:
-    deps:
-      - download/json/request.json
-    cmd:
-      python3 download/clear_data.py
-
-  get_links:
-    deps:
-      - download/json/request.json
-    cmd:
-      python3 download/get_links.py
-    outs:
-      - download/json/links.json
-
-  get_imgs:
-    deps:
-      - download/json/links.json
-    cmd:
-      python3 download/get_imgs.py
-    outs:
-      - download/dataset/
 
 
 ##

@@ -10,25 +10,18 @@ stages:
     outs:
     - path: download/json/links.json
       hash: md5
-      md5: 9063d718a13f45aad2dca592f2d14270
-      size: 4320
+      md5: 14396c6047d41ffdf8ae14b7d9aea77f
+      size: 4092
   get_imgs:
     cmd: python3 download/get_imgs.py
     deps:
     - path: download/json/links.json
       hash: md5
-      md5: 9063d718a13f45aad2dca592f2d14270
-      size: 4320
+      md5: 14396c6047d41ffdf8ae14b7d9aea77f
+      size: 4092
     outs:
     - path: download/dataset/
       hash: md5
-      md5: b9ae3b3c2b9518047c4b70c7201b0d22.dir
-      size: 83833249
+      md5: 4b56db6f408614c30b83821d6e26ea70.dir
+      size: 17938668
       nfiles: 50
-  clear_data:
-    cmd: python3 download/clear_data.py
-    deps:
-    - path: download/json/request.json
-      hash: md5
-      md5: 72c4201108a9f1947b064061f3b88ae8
-      size: 235

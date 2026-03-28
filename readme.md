@@ -43,10 +43,10 @@ dvc push
 
 ## Учебные материалы 
 
-- [x] [Softmax](https://www.pinecone.io/learn/softmax-activation/)  
-- [x] [NN](https://www.youtube.com/watch?v=CqOfi41LfDw)
-- [x] [NN: Backpropagation](https://www.youtube.com/watch?v=IN2XmBhILt4)
-- [x] [NN: Cross Entropy](https://www.youtube.com/watch?v=6ArSys5qHAU)
-- [x] [CNN](https://www.youtube.com/watch?v=HGwBXDKFk9)
-- [ ] [CNN: practice](https://www.youtube.com/watch?v=CtzfbUwrYGI&t=435s)  
+- [Softmax](https://www.pinecone.io/learn/softmax-activation/)  
+- [NN](https://www.youtube.com/watch?v=CqOfi41LfDw)
+- [NN: Backpropagation](https://www.youtube.com/watch?v=IN2XmBhILt4)
+- [NN: Cross Entropy](https://www.youtube.com/watch?v=6ArSys5qHAU)
+- [CNN](https://www.youtube.com/watch?v=HGwBXDKFk9)
+- [CNN: practice](https://www.youtube.com/watch?v=CtzfbUwrYGI&t=435s)  
 
