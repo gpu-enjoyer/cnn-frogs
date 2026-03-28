@@ -1,8 +1,7 @@
 
-dvc
-
-jupyter
 ipykernel
+
+dvc
 
 matplotlib
 seaborn
