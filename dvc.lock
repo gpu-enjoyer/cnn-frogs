@@ -1,0 +1,34 @@
+schema: '2.0'
+stages:
+  get_links:
+    cmd: python3 download/get_links.py
+    deps:
+    - path: download/json/request.json
+      hash: md5
+      md5: 72c4201108a9f1947b064061f3b88ae8
+      size: 235
+    outs:
+    - path: download/json/links.json
+      hash: md5
+      md5: 9063d718a13f45aad2dca592f2d14270
+      size: 4320
+  get_imgs:
+    cmd: python3 download/get_imgs.py
+    deps:
+    - path: download/json/links.json
+      hash: md5
+      md5: 9063d718a13f45aad2dca592f2d14270
+      size: 4320
+    outs:
+    - path: download/dataset/
+      hash: md5
+      md5: b9ae3b3c2b9518047c4b70c7201b0d22.dir
+      size: 83833249
+      nfiles: 50
+  clear_data:
+    cmd: python3 download/clear_data.py
+    deps:
+    - path: download/json/request.json
+      hash: md5
+      md5: 72c4201108a9f1947b064061f3b88ae8
+      size: 235
