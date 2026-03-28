@@ -1,4 +1,6 @@
 
+# Use with caution
+
 from   pathlib import Path
 import json
 import shutil     # rm -rf
