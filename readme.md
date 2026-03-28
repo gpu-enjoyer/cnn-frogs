@@ -27,18 +27,9 @@
 ## Todo
 
 - [x] DVC  
-
-```bash
-mkdir -p ~/Desktop/dvc-storage/
-dvc remote add -d myremote ~/Desktop/dvc-storage/
-git add .dvc/
-git commit -m "add dvc remote"
-
-dvc push
-```
-
-- [ ] CNN  
-  https://www.youtube.com/watch?v=CtzfbUwrYGI&t=435s
+- [x] Get data parallel
+- [x] CNN  
+  https://www.youtube.com/watch?v=CtzfbUwrYGI
 
 
 ## Учебные материалы 
